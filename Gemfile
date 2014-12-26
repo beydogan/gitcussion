@@ -18,7 +18,7 @@ gem "font-awesome-rails"
 group :test, :development do
   gem 'faker'
   gem "rspec-rails"
-  gem "sqlite3"
+  gem "pg"
 end
 
 
