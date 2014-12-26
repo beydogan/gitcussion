@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'metamagic'
 gem 'simple_form'
 gem "github_api"
+gem 'devise'
 
 
 group :test, :development do
