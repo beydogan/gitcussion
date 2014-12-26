@@ -12,6 +12,7 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
 
+gem 'bootstrap-sass', '~> 3.3.1'
 
 group :test, :development do
   gem 'faker'
