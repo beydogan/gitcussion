@@ -1,28 +1,17 @@
-== README
+== Gitcuss
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Gitcuss is a platform for discussing Github repositories. You can learn more about a project, library, gem or anything available on Github. Or you can leave a comment about it.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+== Motivation
+
+After reading Readme, I always look for last commit date and watch, star, fork counts to evaluate libraries(gems for ruby) 
+then I decide to use it or not. 
+But sometimes thats not enough. I want to learn what people think about it. Thats why I created Gitcuss.
+
+== Todo
+
+* A Chrome plugin will be available for better experience.
+
+
