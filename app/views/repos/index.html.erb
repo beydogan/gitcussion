@@ -1,0 +1,41 @@
+<h1>Listing repos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Fullname</th>
+      <th>Homepage</th>
+      <th>Stars</th>
+      <th>Watchers</th>
+      <th>Forks</th>
+      <th>Pushed at</th>
+      <th>Html url</th>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repos.each do |repo| %>
+      <tr>
+        <td><%= repo.name %></td>
+        <td><%= repo.fullname %></td>
+        <td><%= repo.homepage %></td>
+        <td><%= repo.stars %></td>
+        <td><%= repo.watchers %></td>
+        <td><%= repo.forks %></td>
+        <td><%= repo.pushed_at %></td>
+        <td><%= repo.html_url %></td>
+        <td><%= repo.data %></td>
+        <td><%= link_to 'Show', repo %></td>
+        <td><%= link_to 'Edit', edit_repo_path(repo) %></td>
+        <td><%= link_to 'Destroy', repo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Repo', new_repo_path %>
