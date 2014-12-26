@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 
 gem 'bootstrap-sass', '~> 3.3.1'
+gem "font-awesome-rails"
 
 group :test, :development do
   gem 'faker'

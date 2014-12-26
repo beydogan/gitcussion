@@ -1,5 +1,26 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+<section class="featured">
+  <div class="container">
+    <div class="row mar-bot40">
+      <div class="col-md-6 col-md-offset-3">
+
+        <div class="align-center">
+          <h2 class="slogan">See Reviews of Github Repositories</h2>
+          <div class="search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for a repository">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button">Go!</button>
+              </span>
+            </div><!-- /input-group -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <%= link_to "Sign in with github", user_omniauth_authorize_path(:github) %>
 
