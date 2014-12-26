@@ -9,6 +9,8 @@ gem 'metamagic'
 gem 'simple_form'
 gem "github_api"
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
 
 
 group :test, :development do
