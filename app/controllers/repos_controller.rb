@@ -18,6 +18,7 @@ class ReposController < ApplicationController
     @repo = Repo.includes(:comments).find_by(fullname: params[:id])#Search db
     if @repo.nil?   #get from api if not in db and save it
       @repo = GetRepoService.new.call(params[:id])
+      @repo.readme = FetchRepoReadmeService.new.call(params[:id])
       @repo.save
     end
 
