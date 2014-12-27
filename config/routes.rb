@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   #get 'r/:owner/:repo' => "repos#show", as: "repo_display"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :repos, path: "r", id: /[a-z0-9]+\/[a-z0-9]+/ do
+  resources :repos, path: "r", constraints: { id: /[0-9A-Za-z_-]+?\/[0-9A-Za-z_-]+/ } do
     resources :comments
     collection do
       post 'search'
