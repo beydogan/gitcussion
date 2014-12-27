@@ -8,12 +8,15 @@
         <div class="align-center">
           <h2 class="slogan">See Reviews of Github Repositories</h2>
           <div class="search-form">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for a repository">
-              <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">Go!</button>
-              </span>
-            </div><!-- /input-group -->
+            <%= form_tag search_repos_path do %>
+                <div class="input-group">
+                  <input type="text" class="form-control" name="query" placeholder="Search for a repository">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Go!</button>
+                  </span>
+                </div><!-- /input-group -->
+            <% end %>
+
           </div>
         </div>
       </div>

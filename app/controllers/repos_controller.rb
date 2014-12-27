@@ -1,6 +1,11 @@
 class ReposController < ApplicationController
   before_action :set_repo, only: [:show, :edit, :update, :destroy]
 
+  def search
+    query = search_params[:query]
+    @repos = SearchRepoService.new.call(query)
+  end
+
   # GET /repos
   # GET /repos.json
   def index
@@ -62,6 +67,10 @@ class ReposController < ApplicationController
   end
 
   private
+
+    def search_params
+      params.permit(:query)
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_repo
       @repo = Repo.find(params[:id])
