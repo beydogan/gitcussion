@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
+
+  resources :comments
+
   root :to => 'home#index'
 
+  #get 'r/:owner/:repo' => "repos#show", as: "repo_display"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :repos do
+  resources :repos, path: "r", id: /[a-z0-9]+\/[a-z0-9]+/ do
+    resources :comments
     collection do
       post 'search'
     end

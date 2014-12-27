@@ -1,25 +1,7 @@
 <div class="panel panel-default panel-google-plus">
-  <div class="dropdown">
-                    <span class="dropdown-toggle" type="button" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </span>
-    <ul class="dropdown-menu" role="menu">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-      <li role="presentation" class="divider"></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-    </ul>
-  </div>
-  <div class="panel-google-plus-tags">
-    <ul>
-      <li>#Millennials</li>
-      <li>#Generation</li>
-    </ul>
-  </div>
   <div class="panel-heading">
     <img class="img-circle pull-left" src="<%= repo.avatar_url %>" alt="" height="50" width="50"/>
-    <h3><%= repo.name %></h3>
+    <h3><%= link_to repo.fullname, repo_display_path("kodgemisi", "confdeck") %></h3>
     <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
   </div>
   <div class="panel-body">

@@ -1,9 +1,9 @@
 class ReposController < ApplicationController
-  before_action :set_repo, only: [:show, :edit, :update, :destroy]
+  before_action :set_repo, only: [:edit, :update, :destroy]
 
   def search
-    query = search_params[:query]
-    @repos = SearchRepoService.new.call(query)
+    @query = search_params[:query]
+    @repos = SearchRepoService.new.call(@query)
   end
 
   # GET /repos
@@ -15,6 +15,8 @@ class ReposController < ApplicationController
   # GET /repos/1
   # GET /repos/1.json
   def show
+      @repo = Repo.where(fullname: params[:id]).first #Search db
+      @repo = GetRepoService.new.call(params[:owner], params[:repo]) if @repo.nil? #get from api if not in db
   end
 
   # GET /repos/new
