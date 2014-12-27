@@ -3,28 +3,13 @@
 <head>
   <title>Gitcuss</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div class="navbar navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="fa fa-bars color-white"></span>
-      </button>
-      <h1>
-        <a class="navbar-brand" href="<%= root_path %>">Gitcuss</a>
-      </h1>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="<%= root_path %>">Home</a></li>
-      </ul>
-    </div><!--/.navbar-collapse -->
-  </div>
-</div>
+<%= render 'layouts/header' %>
 
 <div class="container pad-top20">
 

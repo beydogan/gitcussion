@@ -1,3 +1,40 @@
+<div class="panel panel-default panel-google-plus">
+  <div class="panel-heading">
+    <div class="panel-heading-info pull-left">
+      <img class="img-circle pull-left" src="<%= @repo.avatar_url %>" alt="" height="70" width="70"/>
+      <h3><%= @repo.fullname %></h3>
+      <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
+      <div class="clearfix"></div>
+    </div>
+    <div class="btn-group pull-right">
+      <a href="#" class="btn btn-default btn-sm">## Lock</a>
+      <a href="#" class="btn btn-default btn-sm">## Delete</a>
+      <a href="#" class="btn btn-default btn-sm">## Move</a>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="panel-body readme">
+    <div class="readme-content">
+        <%= @repo.readme.html_safe %>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <button type="button" class="btn btn-default">+1</button>
+    <button type="button" class="btn btn-default">
+      <span class="glyphicon glyphicon-share-alt"></span>
+    </button>
+    <div class="input-placeholder">Add a comment...</div>
+  </div>
+  <div class="panel-google-plus-comment">
+    <img class="img-circle" src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s46" alt="User Image" />
+    <div class="panel-google-plus-textarea">
+      <textarea rows="4"></textarea>
+      <button type="submit" class="btn btn-success disabled">Post comment</button>
+      <button type="reset" class="btn btn-default">Cancel</button>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
 
 <p>
   <strong>Name:</strong>
