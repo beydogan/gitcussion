@@ -29,3 +29,40 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .readme h2{
   font-size: 22px;
 }
+
+.navbar {
+  height: 60px;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  line-height: 30px;
+  height: 45px;
+  font-weight: 700;
+}
+
+
+.navbar-nav>li>a {
+  line-height: 35px;
+}
+
+
+section.featured {
+  padding: 75px 0 125px;
+  background: #272727;
+  color: #fdfdfd;
+}
+
+section.featured h2.slogan {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: center
+}
+
+/* inner heading */
+section.featured.inner {
+  background: #eee;
+  padding: 150px 0 50px;
+}
