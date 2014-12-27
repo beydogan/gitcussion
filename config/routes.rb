@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :comments
-
   root :to => 'home#index'
 
   #get 'r/:owner/:repo' => "repos#show", as: "repo_display"

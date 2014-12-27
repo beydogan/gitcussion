@@ -43,3 +43,6 @@
   <strong>Data:</strong>
   <%= @repo.data %>
 </p>
+
+<%= render 'comment_form' %>
+<%= render 'comment_list', comments: @repo.comments %>

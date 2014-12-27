@@ -16,8 +16,12 @@ class ReposController < ApplicationController
   # GET /repos/1.json
   def show
     @repo = Repo.includes(:comments).find_by(fullname: params[:id])#Search db
-    @repo = GetRepoService.new.call(params[:id]) if @repo.nil? #get from api if not in db
+    if @repo.nil?   #get from api if not in db and save it
+      @repo = GetRepoService.new.call(params[:id])
+      @repo.save
+    end
 
+    @comment = @repo.comments.new
     respond_to do |format|
       if @repo[:status] == :error
         format.html { redirect_to root_path, notice: "Repo Not Found"}
