@@ -3,10 +3,12 @@ class FetchRepoReadmeService < BaseService
     params = fullname.split("/")
     begin
       res = github_api.repos.contents.readme params[0], params[1]
-      readme = res.content
+      readme_base64 = res.content
+      decoded = Base64.decode64 readme_base64
+      readme = github_api.markdown.render text: decoded
     rescue Exception => e
       return error(e.body)
     end
-    readme
+    readme.body
   end
 end
