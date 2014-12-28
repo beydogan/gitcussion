@@ -15,7 +15,7 @@
   </div>
   <div class="panel-body readme">
     <div class="readme-content">
-        <%= @repo.readme.html_safe %>
+        <%= @repo.readme.try(:html_safe) %>
     </div>
   </div>
   <div class="panel-footer">

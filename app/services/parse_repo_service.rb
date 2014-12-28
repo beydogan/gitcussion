@@ -12,7 +12,8 @@ class ParseRepoService < BaseService
     repo.forks = item["forks_count"]
     repo.pushed_at = item["pushed_at"]
     repo.avatar_url = item["owner"]["avatar_url"]
-    repo.data = item.to_json
-    return repo
+    repo.data = JSON.generate(item)
+    return success(repo)
   end
+
 end

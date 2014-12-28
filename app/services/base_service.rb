@@ -14,9 +14,18 @@ class BaseService
     }
   end
 
-  def success
-    {
-        status: :success
-    }
+  def success(payload = nil)
+    if payload
+      {
+          payload: payload,
+          status: :success
+      }
+    else
+      {
+          status: :success
+      }
+    end
   end
+
+
 end

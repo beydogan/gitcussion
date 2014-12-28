@@ -6,6 +6,6 @@ class GetRepoService < BaseService
     rescue Exception => e
       return error(e.body)
     end
-    ParseRepoService.new.call(res)
+    ParseRepoService.new.call(res.body)
   end
 end

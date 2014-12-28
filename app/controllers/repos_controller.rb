@@ -3,7 +3,7 @@ class ReposController < ApplicationController
 
   def search
     @query = search_params[:query]
-    @repos = SearchRepoService.new.call(@query)
+    @repos = SearchRepoService.new.call(@query)[:payload]
   end
 
   # GET /repos
@@ -15,17 +15,15 @@ class ReposController < ApplicationController
   # GET /repos/1
   # GET /repos/1.json
   def show
-    @repo = Repo.includes(:comments).find_by(fullname: params[:id])#Search db
-    if @repo.nil?   #get from api if not in db and save it
-      @repo = GetRepoService.new.call(params[:id])
-      @repo.readme = FetchRepoReadmeService.new.call(params[:id])
-      @repo.save
+    repo_service = FindRepoService.new.call(params[:id])
+    if repo_service[:status] != :error
+      @repo = repo_service[:payload]
+      @comment = @repo.comments.new
     end
 
-    @comment = @repo.comments.new
     respond_to do |format|
-      if @repo[:status] == :error
-        format.html { redirect_to root_path, notice: "Repo Not Found"}
+      if repo_service[:status] == :error
+        format.html { redirect_to root_path, notice: repo_service[:message]}
       else
         format.html
       end
