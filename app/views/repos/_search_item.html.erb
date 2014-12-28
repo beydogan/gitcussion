@@ -1,26 +1,17 @@
-<div class="panel panel-default panel-google-plus">
+<div class="panel panel-default panel-search-item">
   <div class="panel-heading">
-    <img class="img-circle pull-left" src="<%= repo.avatar_url %>" alt="" height="50" width="50"/>
-    <h3><%= link_to repo.fullname, repo_path(repo.fullname) %></h3>
-    <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
+    <div class="panel-title">
+      <img class="img-circle pull-left" src="<%= repo.avatar_url %>" alt="" height="65" width="65"/>
+      <h3><%= link_to repo.fullname, repo_path(repo.fullname) %></h3>
+      <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
+    </div>
+    <!-- panel toolbar button -->
+    <div class="panel-toolbar text-right">
+      <button class="btn btn-primary">Default</button>
+      <button class="btn btn-sm btn-success">Small</button>
+    </div>
   </div>
   <div class="panel-body">
     <p></p>
-  </div>
-  <div class="panel-footer">
-    <button type="button" class="btn btn-default">+1</button>
-    <button type="button" class="btn btn-default">
-      <span class="glyphicon glyphicon-share-alt"></span>
-    </button>
-    <div class="input-placeholder">Add a comment...</div>
-  </div>
-  <div class="panel-google-plus-comment">
-    <img class="img-circle" src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s46" alt="User Image" />
-    <div class="panel-google-plus-textarea">
-      <textarea rows="4"></textarea>
-      <button type="submit" class="btn btn-success disabled">Post comment</button>
-      <button type="reset" class="btn btn-default">Cancel</button>
-    </div>
-    <div class="clearfix"></div>
   </div>
 </div>
