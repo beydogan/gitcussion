@@ -76,6 +76,10 @@ section.featured.inner {
   margin-top: 5px;
 }
 
+.panel-search-item > .panel-heading > .panel-title{
+  width: 2%
+}
+
 
 .commentList {
   padding:0;
@@ -131,4 +135,146 @@ section.featured.inner {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+
+/* ---- padding ---- */
+/* top */
+.pad-top0 {
+  padding-top: 0;
+}
+.pad-top5 {
+  padding-top: 5px;
+}
+
+.pad-top10 {
+  padding-top: 10px;
+}
+
+.pad-top15 {
+  padding-top: 15px;
+}
+.pad-top20 {
+  padding-top: 20px;
+}
+.pad-top25 {
+  padding-top: 25px;
+}
+.pad-top30 {
+  padding-top: 30px;
+}
+.pad-top35 {
+  padding-top: 35px;
+}
+.pad-top40 {
+  padding-top: 40px;
+}
+/* bottom */
+.pad-bot0 {
+  padding-bottom: 0;
+}
+.pad-bot5 {
+  padding-bottom: 5px;
+}
+
+.pad-bot10 {
+  padding-bottom: 10px;
+}
+
+.pad-bot15 {
+  padding-bottom: 15px;
+}
+.pad-bot20 {
+  padding-bottom: 20px;
+}
+.pad-bot25 {
+  padding-bottom: 25px;
+}
+.pad-bot30 {
+  padding-bottom: 30px;
+}
+.pad-bot35 {
+  padding-bottom: 35px;
+}
+.pad-bot40 {
+  padding-bottom: 40px;
+}
+
+
+/* ---- margin --- */
+.mar-left5 { margin-left: 5px; }
+.mar-left10 { margin-left: 10px; }
+.mar-left15 { margin-left: 15px; }
+.mar-left20 { margin-left: 20px; }
+.mar-left25 { margin-left: 25px; }
+.mar-left30 { margin-left: 30px; }
+
+.mar-right5 { margin-right: 5px; }
+.mar-right10 { margin-right: 10px; }
+.mar-right15 { margin-right: 15px; }
+.mar-right20 { margin-right: 20px; }
+.mar-right25 { margin-right: 25px; }
+.mar-right30 { margin-right: 30px; }
+
+/* top */
+.mar-top0 {
+  margin-top: 0;
+}
+.mar-top5 {
+  margin-top: 5px;
+}
+
+.mar-top10 {
+  margin-top: 10px;
+}
+
+.mar-top15 {
+  margin-top: 15px;
+}
+.mar-top20 {
+  margin-top: 20px;
+}
+.mar-top25 {
+  margin-top: 25px;
+}
+.mar-top30 {
+  margin-top: 30px;
+}
+.mar-top35 {
+  margin-top: 35px;
+}
+.mar-top40 {
+  margin-top: 40px;
+}
+
+
+/* bottom */
+.mar-bot0 {
+  margin-bottom: 0;
+}
+.mar-bot5 {
+  margin-bottom: 5px;
+}
+
+.mar-bot10 {
+  margin-bottom: 10px;
+}
+
+.mar-bot15 {
+  margin-bottom: 15px;
+}
+.mar-bot20 {
+  margin-bottom: 20px;
+}
+.mar-bot25 {
+  margin-bottom: 25px;
+}
+.mar-bot30 {
+  margin-bottom: 30px;
+}
+.mar-bot35 {
+  margin-bottom: 35px;
+}
+.mar-bot40 {
+  margin-bottom: 40px;
 }

@@ -1,11 +1,11 @@
 <section class="featured">
   <div class="container">
-    <div class="row mar-bot40">
+    <div class="row mar-bot10">
       <div class="col-md-6 col-md-offset-3">
 
         <div class="align-center">
           <h2 class="slogan">See Reviews of Github Repositories</h2>
-          <div class="search-form">
+          <div class="search-form mar-top30">
             <%= form_tag search_repos_path do %>
                 <div class="input-group">
                   <input type="text" class="form-control" name="query" placeholder="Search for a repository">
@@ -21,3 +21,14 @@
     </div>
   </div>
 </section>
+
+<div class="container pad-top20">
+  <div class="row">
+    <div class="col-lg-12">
+      <h3>Most Commented Repositories</h3>
+      <% @top_commented.each do |repo| %>
+          <%= render 'repos/search_item', repo: repo %>
+      <% end %>
+    </div>
+  </div>
+</div>
