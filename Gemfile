@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
@@ -17,11 +18,11 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem "font-awesome-rails"
 gem "rails-bootstrap-helpers"
 gem 'rails-timeago', '~> 2.0'
+gem "pg"
 
 group :test, :development do
   gem 'faker'
   gem "rspec-rails"
-  gem "pg"
 end
 
 
