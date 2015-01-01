@@ -3,15 +3,13 @@
     <div class="panel-title">
       <img class="img-circle pull-left" src="<%= repo.avatar_url %>" alt="" height="65" width="65"/>
       <h3><%= link_to repo.fullname, repo_path(repo.fullname) %></h3>
-      <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
+      <h5><span><%= repo.data_hash["description"] %></span></h5>
     </div>
     <!-- panel toolbar button -->
     <div class="panel-toolbar text-right">
-      <button class="btn btn-primary">Default</button>
-      <button class="btn btn-sm btn-success">Small</button>
+      <span class="label label-default tt" data-title="Stars"><i class="fa fa-star"></i>&nbsp;<%= repo.stars %></span>
+      <span class="label label-default tt" data-title="Watchers"><i class="fa fa-eye"></i>&nbsp;<%= repo.watchers %></span>
+      <span class="label label-default tt" data-title="Open Issues"><i class="fa fa-exclamation-circle"></i>&nbsp;<%= repo.data_hash["open_issues"] %></span>
     </div>
-  </div>
-  <div class="panel-body">
-    <p></p>
   </div>
 </div>
