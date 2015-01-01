@@ -11,6 +11,7 @@ gem "github_api"
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'jquery-ui-rails'
 
 gem 'bootstrap-sass', '~> 3.3.1'
 gem "font-awesome-rails"

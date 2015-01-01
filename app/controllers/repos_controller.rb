@@ -18,7 +18,7 @@ class ReposController < ApplicationController
     repo_service = FindRepoService.new.call(params[:id])
     if repo_service[:status] != :error
       @repo = repo_service[:payload]
-      @comment = @repo.comments.new
+      @comment = Comment.new
     end
 
     respond_to do |format|

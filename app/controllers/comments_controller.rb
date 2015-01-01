@@ -26,6 +26,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = @repo.comments.new(comment_params)
+    @comment.user = current_user
 
     respond_to do |format|
       if @comment.save
@@ -35,6 +36,7 @@ class CommentsController < ApplicationController
         format.html { render :new }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
+      format.js
     end
   end
 

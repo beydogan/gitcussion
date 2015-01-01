@@ -1,0 +1,3 @@
+$("#comment_text").val("");
+$("#<%= dom_id(@repo) %>").find(".commentList").prepend("<%=escape_javascript(render("repos/comment", :comment => @comment))%>");
+$("#<%= dom_id(@comment) %>").effect('highlight', 500)

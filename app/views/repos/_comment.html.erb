@@ -1,1 +1,8 @@
-<%= comment.text %><br />
+<li id="<%= dom_id(comment) %>">
+  <div class="commenterImage">
+    <img src="<%= comment.user.avatar_url %>">
+  </div>
+  <div class="commentText">
+    <p class=""><%= comment.text %></p> <span class="date sub-text"><%= comment.created_at %></span> <span>by dsas</span>
+  </div>
+</li>

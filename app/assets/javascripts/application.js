@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require readmore
 //= require bootstrap/tooltip
+//= require jquery.ui.effect-highlight
 //= require_tree .
 
 

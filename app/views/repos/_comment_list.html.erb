@@ -1,3 +1,6 @@
-<% comments.each do |comment| %>
-    <%= render "comment", comment: comment %>
-<% end %>
+<h4>Comments about <strong><%= @repo.name %></strong></h4>
+<ul class="commentList">
+    <% comments.each do |comment| %>
+        <%= render "comment", comment: comment %>
+    <% end %>
+</ul>

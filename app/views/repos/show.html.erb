@@ -1,85 +1,24 @@
-<div class="panel panel-default panel-google-plus">
+<div class="panel panel-default panel-search-item" id="<%= dom_id(@repo) %>">
   <div class="panel-heading">
-    <div class="panel-heading-info pull-left">
-      <img class="img-circle pull-left" src="<%= @repo.avatar_url %>" alt="" height="70" width="70"/>
-      <h3><%= @repo.fullname %></h3>
-      <h5><span>Shared publicly</span> - <span>Jun 27, 2014</span> </h5>
-      <div class="clearfix"></div>
+    <div class="panel-title">
+      <img class="img-circle pull-left" src="<%= @repo.avatar_url %>" alt="" height="65" width="65"/>
+      <h3><%= link_to @repo.fullname, repo_path(@repo.fullname) %></h3>
+      <h5><span><%= @repo.data_hash["description"] %></span></h5>
     </div>
-    <div class="btn-group pull-right">
-      <a href="#" class="btn btn-default btn-sm">## Lock</a>
-      <a href="#" class="btn btn-default btn-sm">## Delete</a>
-      <a href="#" class="btn btn-default btn-sm">## Move</a>
+    <!-- panel toolbar button -->
+    <div class="panel-toolbar text-right">
+      <span class="label label-default tt" data-title="Stars"><i class="fa fa-star"></i>&nbsp;<%= @repo.stars %></span>
+      <span class="label label-default tt" data-title="Watchers"><i class="fa fa-eye"></i>&nbsp;<%= @repo.watchers %></span>
+      <span class="label label-default tt" data-title="Open Issues"><i class="fa fa-exclamation-circle"></i>&nbsp;<%= @repo.data_hash["open_issues"] %></span>
     </div>
-    <div class="clearfix"></div>
   </div>
   <div class="panel-body readme">
     <div class="readme-content">
-        <%= @repo.readme.try(:html_safe) %>
+      <%= @repo.readme.try(:html_safe) %>
     </div>
   </div>
   <div class="panel-footer">
-    <button type="button" class="btn btn-default">+1</button>
-    <button type="button" class="btn btn-default">
-      <span class="glyphicon glyphicon-share-alt"></span>
-    </button>
-    <div class="input-placeholder">Add a comment...</div>
-  </div>
-  <div class="panel-google-plus-comment">
-    <img class="img-circle" src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s46" alt="User Image" />
-    <div class="panel-google-plus-textarea">
-      <textarea rows="4"></textarea>
-      <button type="submit" class="btn btn-success disabled">Post comment</button>
-      <button type="reset" class="btn btn-default">Cancel</button>
-    </div>
-    <div class="clearfix"></div>
+    <%= render 'comment_list', comments: @repo.comments %>
+    <%= render 'comment_form' %>
   </div>
 </div>
-
-<p>
-  <strong>Name:</strong>
-  <%= @repo.name %>
-</p>
-
-<p>
-  <strong>Fullname:</strong>
-  <%= @repo.fullname %>
-</p>
-
-<p>
-  <strong>Homepage:</strong>
-  <%= @repo.homepage %>
-</p>
-
-<p>
-  <strong>Stars:</strong>
-  <%= @repo.stars %>
-</p>
-
-<p>
-  <strong>Watchers:</strong>
-  <%= @repo.watchers %>
-</p>
-
-<p>
-  <strong>Forks:</strong>
-  <%= @repo.forks %>
-</p>
-
-<p>
-  <strong>Pushed at:</strong>
-  <%= @repo.pushed_at %>
-</p>
-
-<p>
-  <strong>Html url:</strong>
-  <%= @repo.html_url %>
-</p>
-
-<p>
-  <strong>Data:</strong>
-  <%= @repo.data %>
-</p>
-
-<%= render 'comment_form' %>
-<%= render 'comment_list', comments: @repo.comments %>
