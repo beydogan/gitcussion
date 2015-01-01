@@ -14,4 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require readmore
+//= require bootstrap/tooltip
 //= require_tree .
+
+
+$(document).ready(function(){
+    $(".tt").tooltip()
+});
