@@ -16,6 +16,7 @@ gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem "font-awesome-rails"
 gem "rails-bootstrap-helpers"
+gem 'rails-timeago', '~> 2.0'
 
 group :test, :development do
   gem 'faker'

@@ -16,6 +16,7 @@
 //= require readmore
 //= require bootstrap/tooltip
 //= require jquery.ui.effect-highlight
+//= require rails-timeago
 //= require_tree .
 
 

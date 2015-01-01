@@ -1,8 +1,8 @@
 <li id="<%= dom_id(comment) %>">
   <div class="commenterImage">
-    <img src="<%= comment.user.avatar_url %>">
+    <a href="<%= comment.user.github_url  %>"><img src="<%= comment.user.avatar_url %>"></a>
   </div>
   <div class="commentText">
-    <p class=""><%= comment.text %></p> <span class="date sub-text"><%= comment.created_at %></span> <span>by dsas</span>
+    <p class=""><%= comment.text %></p> <span class="date sub-text"><%= timeago_tag comment.created_at, :nojs => true, :limit => 100.days.ago %> ago</span> <span class="sub-text">by <%= link_to comment.user.username, comment.user.github_url %></span>
   </div>
 </li>
