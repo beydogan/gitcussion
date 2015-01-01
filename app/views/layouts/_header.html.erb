@@ -28,6 +28,7 @@
     <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
             <li><a href="#"><%= current_user.username %></a></li>
+            <li><%= link_to "Logout",  destroy_user_session_path, :method => :delete  %></li>
         <% else %>
             <li><a href="<%= user_omniauth_authorize_path(:github) %>">Sign in with Github</a></li>
         <% end %>

@@ -31,7 +31,7 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .navbar {
-  height: 60px;
+  height: 58px;
   margin-bottom: 0;
 }
 
@@ -114,4 +114,21 @@ section.featured.inner {
 
 .pt20{
   padding-top: 20px;
+}
+
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
 }
