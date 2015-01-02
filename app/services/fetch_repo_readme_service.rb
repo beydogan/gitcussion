@@ -3,7 +3,7 @@ class FetchRepoReadmeService < BaseService
     begin
       readme = octokit.readme(fullname, accept:"application/vnd.github.VERSION.html")
     rescue Octokit::NotFound
-      success("No Readme File :(")
+      return success("No Readme File :(")
     rescue Exception => e
       return error(e.message)
     end
