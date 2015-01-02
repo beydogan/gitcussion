@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => 'home#index'
 
   #get 'r/:owner/:repo' => "repos#show", as: "repo_display"
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  devise_for :users, :skip => [:registrations, :passwords], :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", sessions: "users/sessions"}
   resources :repos, path: "r", constraints: { id: /[0-9A-Za-z_-]+?\/[0-9A-Za-z_-]+/ } do
     resources :comments
     collection do

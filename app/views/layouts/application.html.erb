@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Gitcuss</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= javascript_tag do %>
-    login_path = "<%= login_path %>"
-  <% end %>
-</head>
-<body>
+    <%= render "layouts/head_tag" %>
+    <body>
 
-<%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
 
-<div class="container pt20">
-  <%= yield %>
-</div>
-<%= render 'layouts/footer' %>
+    <div class="container pt20">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
 
-</body>
+    </body>
 </html>

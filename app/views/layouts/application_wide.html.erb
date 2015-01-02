@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Gitcuss</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <%= render "layouts/head_tag" %>
+    <body>
 
-<%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
 
-<div class="row">
-  <div class="col-lg-12">
-    <%= yield %>
-  </div>
-</div>
+    <div class="row">
+      <div class="col-lg-12">
+        <%= yield %>
+      </div>
+    </div>
 
-<%= render 'layouts/footer' %>
-</body>
+    <%= render 'layouts/footer' %>
+    </body>
 </html>

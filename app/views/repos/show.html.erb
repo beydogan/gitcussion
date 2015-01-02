@@ -1,3 +1,9 @@
+<%
+   meta title: "#{@repo.name.humanize} on Gitcuss",
+        description: "Reviews, comments and details about #{@repo.name}",
+        keywords: [@repo.name, @repo.fullname]
+%>
+
 <div class="panel panel-default panel-search-item" id="<%= dom_id(@repo) %>">
   <div class="panel-heading">
     <div class="panel-title">
