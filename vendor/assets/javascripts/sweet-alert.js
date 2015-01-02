@@ -55,6 +55,9 @@
       div.appendChild(document.createTextNode(str));
       return div.innerHTML;
     },
+      unescapeHtml = function(str) {
+          return str;
+      },
     _show = function(elem) {
       elem.style.opacity = '';
       elem.style.display = 'block';
@@ -490,12 +493,16 @@
 
     // Title
     $title.innerHTML = escapeHtml(params.title).split("\n").join("<br>");
+    $text.innerHTML = unescapeHtml(params.text).split("\n").join("<br>");
 
     // Text
-    $text.innerHTML = (params.text || '').split("\n").join("<br>");
-    if (params.text) {
-      show($text);
-    }
+//    var text_str = (params.text || '').split("\n").join("<br>");
+//    var div = document.createElement('div');
+//    div =  div.appendChild(document.createTextNode(text_str));
+//    $text.innerHTML = div.innerHTML;
+//    if (params.text) {
+//      show($text);
+//    }
 
     // Icon
     hide(modal.querySelectorAll('.icon'));

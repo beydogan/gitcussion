@@ -30,6 +30,12 @@ $(document).on('page:load', ready);
 
 $(document).ajaxError(function (e, xhr, settings) {
     if (xhr.status == 401) {
-        sweetAlert("Oops...", "You have to <a href=\"" + login_path+ "\">login</a> first ", "error");
+        if(xhr.responseText.indexOf("sign in") > -1)
+            sweetAlert("Oops...", "You have to <a href=\"" + login_path+ "\">login</a> first ", "error");
+        else
+            swal("Oops...", xhr.responseText, "error")
+    }
+    if (xhr.status == 500 || xhr.status == 404) {
+       swal("Oops...", "It seems you broke something we forgot to test :(", "warning")
     }
 });

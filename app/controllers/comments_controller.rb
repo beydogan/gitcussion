@@ -17,6 +17,23 @@ class CommentsController < ApplicationController
     end
   end
 
+  # DELETE /comments/1
+  # DELETE /comments/1.json
+  def destroy
+    @comment = Comment.find(params[:id])
+    if current_user == @comment.user
+      @comment.destroy
+      respond_to do |format|
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.js { render text: "You are not authorized", status: :unauthorized }
+      end
+    end
+
+  end
+
   private
 
     def set_repo
