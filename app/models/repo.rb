@@ -1,6 +1,6 @@
 class Repo < ActiveRecord::Base
   serialize :so_data, Hash
-  has_many :comments
+  has_many :comments, -> { order(created_at: :desc) }
   def data_hash
     JSON.parse(self.data)
   end
