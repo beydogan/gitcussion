@@ -12,6 +12,9 @@ class FindRepoService < BaseService
       end
       @repo = repo_service[:payload]
       @repo.readme = readme_service[:payload]
+
+      so_service = StackoverflowService.new.call(@repo.tag)
+      @repo.so_data = so_service[:payload]
       @repo.save
     end
     return success(@repo)
