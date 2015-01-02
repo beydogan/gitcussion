@@ -108,6 +108,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    octokit (3.7.0)
+      sawyer (~> 0.6.0, >= 0.5.3)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -173,6 +175,9 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    sawyer (0.6.0)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
     simple_form (3.1.0)
@@ -222,6 +227,7 @@ DEPENDENCIES
   jquery-ui-rails
   metamagic
   nprogress-rails
+  octokit (~> 3.0)
   omniauth
   omniauth-github
   pg

@@ -1,19 +1,11 @@
-# encoding: utf-8
-
 class FetchRepoReadmeService < BaseService
   def call(fullname)
-    params = fullname.split("/")
     begin
-      res = github_api.repos.contents.readme params[0], params[1]
-      readme_base64 = res.content
-      decoded = Base64.decode64 readme_base64
-      decoded = decoded.force_encoding("UTF-8")
-      md = github_api.markdown
-      readme = md.render text: decoded, mode: "markdown"
+      readme = octokit.readme(fullname, accept:"application/vnd.github.VERSION.html")
     rescue Exception => e
       return error(e.message)
     end
-    success(readme.body)
+    success(readme)
   end
 
 end

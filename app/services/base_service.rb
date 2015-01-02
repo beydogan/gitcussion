@@ -2,7 +2,11 @@ require 'github_api'
 
 class BaseService
   def github_api
-    Github.new
+    $github
+  end
+
+  def octokit
+    $octokit
   end
 
   private
