@@ -17,7 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
           avatar_url: auth_data["info"]["image"],
           username: auth_data["info"]["nickname"]
       )
-
+      @user.save
       sign_in_and_redirect @user, :event => :authentication
     end
   end
