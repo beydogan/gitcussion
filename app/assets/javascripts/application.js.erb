@@ -20,10 +20,13 @@
 //= require sweet-alert
 //= require_tree .
 
-
-$(document).ready(function(){
+var ready = (function(){
     $(".tt").tooltip()
 });
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
 
 $(document).ajaxError(function (e, xhr, settings) {
     if (xhr.status == 401) {
