@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require sweet-alert
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -18,13 +19,13 @@
 //= require bootstrap/collapse
 //= require jquery.ui.effect-highlight
 //= require rails-timeago
-//= require sweet-alert
 //= require nprogress
 //= require nprogress-turbolinks
 //= require_tree .
 
 var ready = (function(){
     $(".tt").tooltip()
+    sweetAlertInitialize();
 });
 
 $(document).ready(ready);
