@@ -14,7 +14,7 @@
             <li><a href="#"><%= current_user.username %></a></li>
             <li><%= link_to "Logout",  destroy_user_session_path, :method => :delete  %></li>
         <% else %>
-            <li><a href="<%= user_omniauth_authorize_path(:github) %>">Sign in with Github</a></li>
+            <li><a href="<%= user_omniauth_authorize_path(:github) %>" data-no-turbolink>Sign in with Github</a></li>
         <% end %>
     </ul>
   </div>
