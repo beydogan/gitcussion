@@ -8,7 +8,8 @@ class FetchRepoReadmeService < BaseService
       readme_base64 = res.content
       decoded = Base64.decode64 readme_base64
       decoded = decoded.force_encoding("UTF-8")
-      readme = github_api.markdown.render text: decoded, mode: "markdown"
+      md = github_api.markdown
+      readme = md.render text: decoded, mode: "markdown"
     rescue Exception => e
       return error(e.message)
     end
