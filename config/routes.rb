@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   #get 'r/:owner/:repo' => "repos#show", as: "repo_display"
   devise_for :users, :skip => [:registrations, :passwords], :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", sessions: "users/sessions"}
-  resources :repos, path: "r", constraints: { id: /[0-9A-Za-z_-]+?\/[0-9A-Za-z_-]+/ } do
+  resources :repos, path: "r", constraints: { id: /[0-9A-Za-z[-][_][\.]]+?\/[0-9A-Za-z[-][_][\.]]+/ } do
     resources :comments, constraints: { id: /[0-9]+/ }
     collection do
       post 'search'
