@@ -4,7 +4,7 @@
   </div>
   <div class="commentText">
     <p class=""><%= comment.comment %></p>
-    <span class="date sub-text"><%= timeago_tag comment.created_at, :nojs => true, :limit => 100.days.ago %> ago</span>
+    <span class="date sub-text"><%= timeago_tag comment.created_at, :nojs => true, :limit => 100.days.ago %> </span>
     <span class="sub-text">by <%= link_to comment.user.username, comment.user.github_url %></span>
     <span class="sub-text pull-right"><%= link_to "delete", repo_comment_path(repo_id: @repo.fullname, id: comment.id), method: :delete, remote: true if comment.user == current_user %></span>
   </div>
