@@ -15,4 +15,8 @@ module ApplicationHelper
 
     "<i class=\"fa #{cls}\"></i>".html_safe
   end
+
+  def login_path
+    user_omniauth_authorize_path(:github)
+  end
 end

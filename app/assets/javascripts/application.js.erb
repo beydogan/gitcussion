@@ -24,3 +24,9 @@
 $(document).ready(function(){
     $(".tt").tooltip()
 });
+
+$(document).ajaxError(function (e, xhr, settings) {
+    if (xhr.status == 401) {
+        sweetAlert("Oops...", "You have to <a href=\"" + login_path+ "\">login</a> first ", "error");
+    }
+});
