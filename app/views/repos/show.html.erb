@@ -1,7 +1,14 @@
 <%
    meta title: "#{@repo.name.humanize} on Gitcuss",
         description: "Reviews, comments and details about #{@repo.name}",
-        keywords: [@repo.name, @repo.fullname]
+        keywords: [@repo.name, @repo.fullname],
+        og: {
+                image: "http://www.gitcuss.com/gitcuss.png",
+                title: "#{@repo.name.humanize} on Gitcuss",
+                description: "Reviews, comments and details about #{@repo.name}",
+                url: repo_url(@repo.fullname)
+        }
+
 %>
 
 <div class="panel panel-default panel-search-item" id="<%= dom_id(@repo) %>">
