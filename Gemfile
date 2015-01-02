@@ -29,8 +29,11 @@ group :assets do
   gem 'uglifier'
 end
 
+
 group :test do
   gem 'shoulda-matchers'
   gem 'fabrication'
   gem "capybara"
 end
+
+gem 'rails_12factor', group: :production
