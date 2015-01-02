@@ -4,4 +4,4 @@
 
 $(document).ready(function(){
     $('.readme-content').readmore();
-})
+});

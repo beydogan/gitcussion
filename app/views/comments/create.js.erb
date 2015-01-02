@@ -1,3 +1,8 @@
-$("#comment_text").val("");
-$("#<%= dom_id(@repo) %>").find(".commentList").prepend("<%=escape_javascript(render("repos/comment", :comment => @comment))%>");
-$("#<%= dom_id(@comment) %>").effect('highlight', 500)
+
+<% if @comment.errors.any? %>
+    sweetAlert("Oops...", "<%= @comment.errors.full_messages.to_sentence %>", "error");
+<% else %>
+    $("#comment_comment").val("");
+    $("#<%= dom_id(@repo) %>").find(".commentList").prepend("<%=escape_javascript(render("repos/comment", :comment => @comment))%>");
+    $("#<%= dom_id(@comment) %>").effect('highlight', 500);
+<% end %>

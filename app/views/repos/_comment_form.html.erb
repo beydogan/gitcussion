@@ -1,7 +1,7 @@
 
 <%= simple_form_for [@repo, @comment], remote: true do |f| %>
     <div class="input-group">
-        <%= f.text_field :text, class: "form-control", placeholder: "Say something about #{@repo.name}" %>
+        <%= f.text_field :comment, class: "form-control", placeholder: "Say something about #{@repo.name}" %>
         <span class="input-group-btn">
         <%= f.submit class: "btn btn-success", value: "Commit" %>
         </span>
