@@ -40,7 +40,7 @@
     <div class="col-lg-12">
       <h3>Most Commented Repositories</h3>
       <% @top_commented.each do |repo| %>
-          <%= render 'repos/search_item', repo: repo %>
+          <%= render 'repo_item', repo: repo %>
       <% end %>
     </div>
   </div>
