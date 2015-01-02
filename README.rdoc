@@ -13,5 +13,8 @@ But sometimes thats not enough. I want to learn what people think about it. That
 == Todo
 
 * A Chrome plugin will be available for better experience.
-
+* Rating system
+* Top rated repositories by categories
+* Repository comparing
+* Displaying more data about repositories
 
