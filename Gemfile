@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
 
 gem 'rails', '4.1.6'
 gem 'sass-rails', '~> 4.0.3'
@@ -25,6 +24,10 @@ group :test, :development do
   gem "rspec-rails"
 end
 
+group :assets do
+  gem 'therubyracer'
+  gem 'uglifier'
+end
 
 group :test do
   gem 'shoulda-matchers'
