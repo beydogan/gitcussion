@@ -1,6 +1,6 @@
-== Gitcuss
+== Gitcussion
 
-Gitcuss is a platform for discussing Github repositories. You can learn more about a project, library, gem or anything available on Github. Or you can leave a comment about it.
+Gitcussion is a platform for discussing Github repositories. You can learn more about a project, library, gem or anything available on Github. Or you can leave a comment about it.
 
 
 
@@ -8,7 +8,7 @@ Gitcuss is a platform for discussing Github repositories. You can learn more abo
 
 After reading Readme, I always look for last commit date and watch, star, fork counts to evaluate libraries(gems for ruby) 
 then I decide to use it or not. 
-But sometimes thats not enough. I want to learn what people think about it. Thats why I created Gitcuss.
+But sometimes thats not enough. I want to learn what people think about it. Thats why I created Gitcussion.
 
 == Todo
 
@@ -18,3 +18,5 @@ But sometimes thats not enough. I want to learn what people think about it. That
 * Repository comparing
 * Displaying more data about repositories
 
+
+It was renamed to Gitcussion from Gitcuss because I didn't know what "cuss" means and apparently it doesn't mean something good :)
