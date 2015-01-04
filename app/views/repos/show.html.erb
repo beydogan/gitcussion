@@ -24,7 +24,7 @@
       <!--<span class="label label-default tt" data-title="Watchers"><i class="fa fa-eye"></i>&nbsp;<%= @repo.watchers %></span>-->
       <span class="label label-default tt" data-title="Open Issues"><i class="fa fa-exclamation-circle"></i>&nbsp;<%= @repo.data_hash["open_issues"] %></span>
       <span class="label label-default tt" data-title="Stack Overflow Answered/Total"><i class="fa fa-stack-overflow"></i>&nbsp;<%= @repo.so_data["answered_questions"] %>/<%= @repo.so_data["total_questions"] %></span>
-      <a href="<%= @repo.data_hash["html_url"] %>">
+      <a href="<%= @repo.data_hash["html_url"] %>" target="_blank">
         <span class="label label-default tt" data-title="Github Page"><i class="fa fa-github"></i></span>
       </a>
 
