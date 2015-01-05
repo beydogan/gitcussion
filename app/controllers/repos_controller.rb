@@ -13,6 +13,8 @@ class ReposController < ApplicationController
     if repo_service[:status] != :error
       @repo = repo_service[:payload]
       @comment = Comment.new
+      @owner = @repo.data_hash["owner"]["login"]
+
     end
 
     respond_to do |format|
