@@ -37,6 +37,10 @@
   </div>
   <div class="panel-footer">
     <%= render 'comment_list', comments: @repo.comments %>
-    <%= render 'comment_form' %>
+    <% if current_user %>
+        <%= render 'comment_form' %>
+    <% else %>
+        <div class="alert alert-warning" role="">First, you have to <a href="<%= user_omniauth_authorize_path(:github) %>">login</a> to send a comment.</div>
+    <% end %>
   </div>
 </div>
