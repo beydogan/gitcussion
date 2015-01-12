@@ -12,7 +12,9 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 == Todo
 
-* A Chrome plugin will be available for better experience.
+* A Chrome plugin will be available for better experience. 
+  Github Repo: http://github.com/beydogan/gitcussion-chrome
+  Early prototype screenshot: [sss](http://i.imgur.com/3fFxekr.png)
 * Rating system
 * Top rated repositories by categories
 * Repository comparing
@@ -20,3 +22,4 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 
 It was renamed to Gitcussion from Gitcuss because I didn't know what "cuss" means and apparently it doesn't mean something good :)
+
