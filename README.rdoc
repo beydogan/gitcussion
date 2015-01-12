@@ -14,7 +14,6 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 * A Chrome plugin will be available for better experience. 
   Github Repo: http://github.com/beydogan/gitcussion-chrome
-  Early prototype screenshot: [sss](http://i.imgur.com/3fFxekr.png)
 * Rating system
 * Top rated repositories by categories
 * Repository comparing
