@@ -14,12 +14,12 @@ class ReposController < ApplicationController
       @repo = repo_service[:payload]
       @comment = Comment.new
       @owner = @repo.data_hash["owner"]["login"]
-
+      @usernames = User.where(id: @repo.comments.pluck(:user_id)).pluck(:username) << @owner
     end
 
     respond_to do |format|
       if repo_service[:status] == :error
-        format.html { redirect_to root_path, notice: repo_service[:message]}
+        format.html { redirect_to root_path, notice: repo_service[:message] }
       else
         format.json
         format.html
@@ -30,16 +30,17 @@ class ReposController < ApplicationController
 
   private
 
-    def search_params
-      params.permit(:query)
-    end
-    # Use callbacks to share common setup or constraints between actions.
-    def set_repo
-      @repo = Repo.find(params[:id])
-    end
+  def search_params
+    params.permit(:query)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def repo_params
-      params.require(:repo).permit(:name, :fullname, :homepage, :stars, :watchers, :forks, :pushed_at, :html_url, :data)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_repo
+    @repo = Repo.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def repo_params
+    params.require(:repo).permit(:name, :fullname, :homepage, :stars, :watchers, :forks, :pushed_at, :html_url, :data)
+  end
 end

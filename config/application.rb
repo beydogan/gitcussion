@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Gitcuss
   class Application < Rails::Application
+    require 'gitcussion'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -25,7 +26,7 @@ module Gitcuss
       c.client_secret = Rails.application.secrets.github_client_secret
     end
 
-    $octokit = Octokit::Client.new({:client_id     => Rails.application.secrets.github_client_id,
-                                   :client_secret => Rails.application.secrets.github_client_secret})
+    $octokit = Octokit::Client.new({:client_id => Rails.application.secrets.github_client_id,
+                                    :client_secret => Rails.application.secrets.github_client_secret})
   end
 end

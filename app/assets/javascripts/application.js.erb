@@ -21,9 +21,11 @@
 //= require rails-timeago
 //= require nprogress
 //= require nprogress-turbolinks
+//= require jquery.caret
+//= require jquery.atwho
 //= require_tree .
 
-var ready = (function(){
+var ready = (function () {
     $(".tt").tooltip()
     sweetAlertInitialize();
 });
@@ -34,12 +36,12 @@ $(document).on('page:load', ready);
 
 $(document).ajaxError(function (e, xhr, settings) {
     if (xhr.status == 401) {
-        if(xhr.responseText.indexOf("sign in") > -1)
-            sweetAlert("Oops...", "You have to <a href=\"" + login_path+ "\">login</a> first ", "error");
+        if (xhr.responseText.indexOf("sign in") > -1)
+            sweetAlert("Oops...", "You have to <a href=\"" + login_path + "\">login</a> first ", "error");
         else
             swal("Oops...", xhr.responseText, "error")
     }
     if (xhr.status == 500 || xhr.status == 404) {
-       swal("Oops...", "It seems you broke something we forgot to test :(", "warning")
+        swal("Oops...", "It seems you broke something we forgot to test :(", "warning")
     }
 });
