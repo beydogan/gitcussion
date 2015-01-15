@@ -22,3 +22,8 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 It was renamed to Gitcussion from Gitcuss because I didn't know what "cuss" means and apparently it doesn't mean something good :)
 
+
+== Contributors
+
+* [Mehmet Beydogan](http://github.com/beydogan)
+* [Yigitcan Bacakoglu](http://github.com/yigitbacakoglu/)
