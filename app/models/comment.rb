@@ -10,7 +10,7 @@ class Comment < ActiveRecord::Base
   def notify_mentions
     return true # Till mail & background job settings done
     User.where(username: Gitcussion::UsernameExtractor.parse(self.comment)).each do |user|
-      UserMailer.new_mention(user, comment).deliver
+      UserMailer.new_mention(user, self).deliver
     end
   end
 
