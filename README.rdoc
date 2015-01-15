@@ -25,5 +25,5 @@ It was renamed to Gitcussion from Gitcuss because I didn't know what "cuss" mean
 
 == Contributors
 
-* [Mehmet Beydogan](http://github.com/beydogan)
-* [Yigitcan Bacakoglu](http://github.com/yigitbacakoglu/)
+* Mehmet Beydogan http://github.com/beydogan
+* Yigitcan Bacakoglu http://github.com/yigitbacakoglu
