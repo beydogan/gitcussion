@@ -9,7 +9,7 @@
 
 <script>
     $(function () {
-        data = <%= raw @usernames.compact %>;
+        data = <%= raw @usernames.uniq.compact %>;
         $('#comment-input').atwho({at: "@", 'data': data});
     });
 </script>
