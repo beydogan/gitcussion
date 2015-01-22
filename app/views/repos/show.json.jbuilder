@@ -5,4 +5,5 @@ json.comments @repo.comments do |comment|
     json.username comment.user.username
     json.avatar_url comment.user.avatar_url
   end
+  json.owner comment.user.username == @repo.data_hash["owner"]["login"]
 end
