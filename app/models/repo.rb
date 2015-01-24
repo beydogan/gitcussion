@@ -16,7 +16,7 @@ class Repo < ActiveRecord::Base
   end
 
   def score
-    average("star").avg
+    average("star") ? average("star").avg : 0.0
   end
 
 end

@@ -72,8 +72,8 @@ section.featured.inner {
 }
 
 .panel-search-item > .panel-heading > .panel-title > img{
-  margin-right: 5px;
-  margin-top: 5px;
+  margin: 2% 5px;
+  margin-left: 0px;
 }
 
 .panel-search-item > .panel-heading > .panel-title{
@@ -299,4 +299,8 @@ section.featured.inner {
 
 .blog-footer .social a {
   font-size: 30px;
+}
+
+.panel-search-item > .panel-heading > .panel-title {
+  width: 1%;
 }

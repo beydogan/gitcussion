@@ -50,7 +50,7 @@ $(function(){
         function(data) {
           if(data) {
             // success code goes here ...
-
+            $("#repo_" + data.id).find(".panel-toolbar .score").html(data.score);
             if ($(_this).attr('data-disable-after-rate') == 'true') {
               $(_this).raty('set', { readOnly: true, score: score });
             }
