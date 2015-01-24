@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  post '/rate' => 'rater#create', :as => 'rate'
   root :to => 'home#index'
 
   #get 'r/:owner/:repo' => "repos#show", as: "repo_display"
