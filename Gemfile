@@ -34,6 +34,7 @@ group :test do
   gem 'shoulda-matchers'
   gem 'fabrication'
   gem "capybara"
+  gem "sqlite3"
 end
 
 gem 'rails_12factor', group: :production
