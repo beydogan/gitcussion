@@ -19,4 +19,12 @@ class Repo < ActiveRecord::Base
     average("star") ? average("star").avg : 0.0
   end
 
+  def self.top_commented(count = 10)
+    self.select("repos.*, COUNT(repo_id) as comment_count").
+        joins(:comments).
+        group("repos.id").
+        order("comment_count DESC").
+        limit(count)
+  end
+
 end
