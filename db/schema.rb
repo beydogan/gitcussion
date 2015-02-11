@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150124214831) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
     t.integer  "rateable_id"
@@ -34,8 +31,8 @@ ActiveRecord::Schema.define(version: 20150124214831) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["repo_id"], name: "index_comments_on_repo_id", using: :btree
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
+  add_index "comments", ["repo_id"], name: "index_comments_on_repo_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "overall_averages", force: true do |t|
     t.integer  "rateable_id"
@@ -55,8 +52,8 @@ ActiveRecord::Schema.define(version: 20150124214831) do
     t.datetime "updated_at"
   end
 
-  add_index "rates", ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type", using: :btree
-  add_index "rates", ["rater_id"], name: "index_rates_on_rater_id", using: :btree
+  add_index "rates", ["rateable_id", "rateable_type"], name: "index_rates_on_rateable_id_and_rateable_type"
+  add_index "rates", ["rater_id"], name: "index_rates_on_rater_id"
 
   create_table "rating_caches", force: true do |t|
     t.integer  "cacheable_id"
@@ -68,7 +65,7 @@ ActiveRecord::Schema.define(version: 20150124214831) do
     t.datetime "updated_at"
   end
 
-  add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type", using: :btree
+  add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
 
   create_table "repos", force: true do |t|
     t.string   "name"
@@ -84,8 +81,8 @@ ActiveRecord::Schema.define(version: 20150124214831) do
     t.datetime "updated_at"
     t.string   "github_id"
     t.string   "avatar_url"
-    t.text     "readme"
-    t.text     "so_data",    default: ""
+    t.text     "readme",     limit: 100
+    t.text     "so_data",                default: ""
   end
 
   create_table "users", force: true do |t|
@@ -109,7 +106,7 @@ ActiveRecord::Schema.define(version: 20150124214831) do
     t.integer  "role",                   default: 0
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
