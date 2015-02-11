@@ -6,4 +6,5 @@ Fabricator(:repo) do
   watchers { Random.rand(50)  }
   forks { Random.rand(6)  }
   so_data { Hash.new }
+  comments rand: 5, fabricator: :comment
 end
