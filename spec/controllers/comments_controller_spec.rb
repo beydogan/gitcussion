@@ -25,38 +25,35 @@ RSpec.describe CommentsController, :type => :controller do
 
   before :each do
     sign_in @user
+    @repo = Fabricate(:repo)
   end
 
-  let(:repo) { Fabricate(:repo) }
 
   # This should return the minimal set of attributes required to create a valid
   # Comment. As you add validations to Comment, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-
-
+    {
+        comment: Faker::Lorem.sentence
+    }
   }
 
   let(:invalid_attributes) {
     skip("Add a hash of attributes invalid for your model")
   }
 
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # CommentsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
 
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Comment" do
         expect {
-          post :create, {:comment => valid_attributes, repo_id: repo}, valid_session
+          post :create, {format: :js, comment: valid_attributes, repo_id: @repo.fullname}
         }.to change(Comment, :count).by(1)
       end
 
       it "assigns a newly created comment as @comment" do
         skip
-        post :create, {:comment => valid_attributes}, valid_session
+        post :create, {format: :js, :comment => valid_attributes}, valid_session
         expect(assigns(:comment)).to be_a(Comment)
         expect(assigns(:comment)).to be_persisted
       end
