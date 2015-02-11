@@ -8,8 +8,7 @@ RSpec.describe CommentsController, :type => :routing do
     end
 
     it "routes to #destroy" do
-      pending
-      expect(:delete => "/r/ruby/ruby/comments/1").to route_to("comments#destroy", id: 1, repo_id: "ruby/ruby")
+      expect(:delete => "/r/ruby/ruby/comments/1").to route_to("comments#destroy", repo_id: "ruby/ruby", id: "1")
     end
 
   end
