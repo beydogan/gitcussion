@@ -39,7 +39,9 @@ RSpec.describe CommentsController, :type => :controller do
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+        comment: ""
+    }
   }
 
 
@@ -52,30 +54,22 @@ RSpec.describe CommentsController, :type => :controller do
       end
 
       it "assigns a newly created comment as @comment" do
-        skip
-        post :create, {format: :js, :comment => valid_attributes}, valid_session
+        post :create, {format: :js, :comment => valid_attributes, repo_id: @repo.fullname}
         expect(assigns(:comment)).to be_a(Comment)
         expect(assigns(:comment)).to be_persisted
       end
 
-      it "redirects to the created comment" do
-        skip
-        post :create, {:comment => valid_attributes}, valid_session
-        expect(response).to redirect_to(Comment.last)
-      end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved comment as @comment" do
-        skip
-        post :create, {:comment => invalid_attributes}, valid_session
+        post :create, {format: :js, :comment => invalid_attributes, repo_id: @repo.fullname}
         expect(assigns(:comment)).to be_a_new(Comment)
       end
 
       it "re-renders the 'new' template" do
-        skip
-        post :create, {:comment => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        post :create, {format: :js, :comment => invalid_attributes, repo_id: @repo.fullname}
+        expect(response).to render_template("comments/create")
       end
     end
   end
@@ -85,14 +79,14 @@ RSpec.describe CommentsController, :type => :controller do
       skip
       comment = Comment.create! valid_attributes
       expect {
-        delete :destroy, {:id => comment.to_param}, valid_session
+        delete :destroy, {:id => comment.to_param}
       }.to change(Comment, :count).by(-1)
     end
 
     it "redirects to the comments list" do
       skip
       comment = Comment.create! valid_attributes
-      delete :destroy, {:id => comment.to_param}, valid_session
+      delete :destroy, {:id => comment.to_param}
       expect(response).to redirect_to(comments_url)
     end
   end
