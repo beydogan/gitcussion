@@ -1,3 +1,15 @@
+# FindRepoService is used to get repo data by reponame
+# It gets repo from database if it exist.
+# If it doesn't exist on database, it gets from GitHub.
+# First, it fetches Repo data then Readme file and then StackOverflow data
+# Then it saves repo to database and returns it.
+#
+# @example Sample Usage
+#   repo_service = FindRepoService.new.call(params[:id])
+#   if repo_service[:status] != :error
+#     @repo = repo_service[:payload]
+#   end
+#
 class FindRepoService < BaseService
   def call(fullname)
     @repo = Repo.includes(:comments).find_by(fullname: fullname)#Search db
