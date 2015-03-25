@@ -2,8 +2,6 @@
 
 Gitcussion is a platform for discussing Github repositories. You can learn more about a project, library, gem or anything available on Github. Or you can leave a comment about it.
 
-
-
 == Motivation
 
 After reading Readme, I always look for last commit date and watch, star, fork counts to evaluate libraries(gems for ruby) 
@@ -14,14 +12,9 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 * A Chrome plugin will be available for better experience. 
   Github Repo: http://github.com/beydogan/gitcussion-chrome
-* Rating system
 * Top rated repositories by categories
 * Repository comparing
 * Displaying more data about repositories
-
-
-It was renamed to Gitcussion from Gitcuss because I didn't know what "cuss" means and apparently it doesn't mean something good :)
-
 
 == Contributors
 
