@@ -1,4 +1,5 @@
 # GetRepoService is used to get repo from GitHub by reponame
+# It returns a parsed Repo object using ParseRepoService
 #
 # @example Sample Usage
 # 	repo_service = GetRepoService.new.call(fullname)
