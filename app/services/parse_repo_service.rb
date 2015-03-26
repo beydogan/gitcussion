@@ -1,3 +1,11 @@
+# ParseRepoService is used to parse api response of a repo to Repo object
+# It takes a repo data hash and returns Repo object
+#
+# @example Sample Usage
+#   res = github_api.repos.get params[0], params[1]
+#   parse_service = ParseRepoService.new.call(res.body)
+#   @repo = parse_service[:payload]
+#   
 class ParseRepoService < BaseService
   def call(item)
     github_id = item["id"]

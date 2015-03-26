@@ -5,11 +5,10 @@
 # Then it saves repo to database and returns it.
 #
 # @example Sample Usage
-#   repo_service = FindRepoService.new.call(params[:id])
-#   if repo_service[:status] != :error
-#     @repo = repo_service[:payload]
-#   end
-#
+#   res = github_api.repos.get params[0], params[1]
+#   parse_service = ParseRepoService.new.call(res.body)
+#   @repo = parse_service[:payload]
+#   
 class FindRepoService < BaseService
   def call(fullname)
     @repo = Repo.includes(:comments).find_by(fullname: fullname)#Search db
