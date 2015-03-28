@@ -1,3 +1,10 @@
+# SearchRepoService is used to search repos using GitHub api
+# It takes a query parameter and returns parsed results using ParseSearchResultService
+#
+# @example Sample Usage in controller
+#   @query = params[:query]
+#   @repos = SearchRepoService.new.call(@query)[:payload]
+#  
 class SearchRepoService < BaseService
   def call(query)
     response = github_api.search.repos query
