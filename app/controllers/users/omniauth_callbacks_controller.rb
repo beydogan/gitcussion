@@ -1,7 +1,6 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def github
     auth_data = request.env["omniauth.auth"]
-    # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.from_github(auth_data['uid'])
 
     if @user && @user.persisted?
