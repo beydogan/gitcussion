@@ -6,7 +6,6 @@ class Comment < ActiveRecord::Base
 
   after_commit :notify_mentions, :on => [:create, :update]
 
-
   def notify_mentions
     return true # Till mail & background job settings done
     User.where(username: Gitcussion::UsernameExtractor.parse(self.comment)).each do |user|
