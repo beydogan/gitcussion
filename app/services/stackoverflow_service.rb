@@ -1,3 +1,13 @@
+# StackoverflowService is fetch data from StackOverflow using a tag
+# It takes a tag parameter and returns a data hash which includes
+# - Total questions
+# - Answered questions
+# - Unanswered questions
+#
+# @example Sample Usage 
+# so_service = StackoverflowService.new.call('rails')
+# rails_data = so_service[:payload]
+#  
 class StackoverflowService < BaseService
   require 'stack_overflow'
 
