@@ -74,4 +74,11 @@ RSpec.describe CommentsController, :type => :controller do
     end
   end
 
+  describe "POST like" do
+    it "changes the like status of the comment of the user" do
+      skip
+      post :like, {format: :js, :comment => valid_attributes, repo_id: @repo.fullname}
+      (@user.likes? valid_attributes).should be_true
+    end
+  end
 end
