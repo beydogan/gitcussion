@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:github]
   has_many :comments, dependent: :destroy
 
+  acts_as_voter
   def self.from_github(uid)
     User.where(uid: uid).first
   end
