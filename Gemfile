@@ -19,9 +19,14 @@ gem "rails-bootstrap-helpers"
 gem 'rails-timeago', '~> 2.0'
 gem "pg"
 
+gem 'acts_as_votable', '~> 0.10.0'
+
 group :test, :development do
   gem 'faker'
   gem "rspec-rails"
+  ## Utilty
+  gem "pry"
+  gem "pry-rails"
 end
 
 group :assets do

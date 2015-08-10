@@ -18,5 +18,6 @@ But sometimes thats not enough. I want to learn what people think about it. That
 
 == Contributors
 
+* Ender Ahmet Yurt http://github.com/enderahmetyurt
 * Mehmet Beydogan http://github.com/beydogan
 * Yigitcan Bacakoglu http://github.com/yigitbacakoglu

@@ -31,7 +31,18 @@ class CommentsController < ApplicationController
         format.js { render text: "You are not authorized", status: :unauthorized }
       end
     end
+  end
 
+  def like
+    @comment = Comment.find(params[:id])
+    if current_user.likes? @comment
+      @comment.unliked_by current_user
+    else
+      @comment.liked_by current_user
+    end
+    respond_to do |format|
+      format.js
+    end
   end
 
   private
