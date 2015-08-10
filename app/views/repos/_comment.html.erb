@@ -7,10 +7,10 @@
     <span class="like sub-text" id="<%= comment.id %>">
       <%= link_to like_repo_comment_path(comment.repo, comment), method: :post, remote: true do %>
         <%= current_user.likes?(comment) ? 'dislike' : 'like' %>
-      <% end %>
+      <% end if current_user %>
       <i class="fa fa-thumbs-up"></i><span class="likes_number_for_<%= comment.id %>"><%= comment.get_likes.size %></span>
     </span>
-    <span class="date sub-text"><%= timeago_tag comment.created_at, :nojs => true, :limit => 100.days.ago %> </span>
+    <span class="date sub-text"><%= timeago_tag comment.created_at, :nojs => true, :limit => 1000.days.ago %> </span>
     <span class="sub-text">by <%= link_to comment.user.username, comment.user.github_url %>
       <% if @owner == comment.user.username %>
         <div class="label label-warning">Owner</div>

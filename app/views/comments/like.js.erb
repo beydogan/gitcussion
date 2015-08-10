@@ -1,6 +1,8 @@
-<% if current_user.likes? @comment %>
-  $('span#<%= @comment.id %> a').text('dislike')
-<% else %>
-  $('span#<%= @comment.id %> a').text('like')
+<% if current_user %>
+    <% if current_user.likes? @comment %>
+      $('span#<%= @comment.id %> a').text('dislike')
+    <% else %>
+      $('span#<%= @comment.id %> a').text('like')
+    <% end %>
 <% end %>
 $('span.likes_number_for_<%= @comment.id %>').text('<%= @comment.get_likes.size %>')

@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20150710120627) do
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["repo_id"], name: "index_comments_on_repo_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["repo_id"], name: "index_comments_on_repo_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "overall_averages", force: true do |t|
     t.integer  "rateable_id"
@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 20150710120627) do
     t.string   "voter_type"
     t.boolean  "vote_flag"
     t.string   "vote_scope"
-    t.integer  "vote_weight",  default: 0
+    t.integer  "vote_weight"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
