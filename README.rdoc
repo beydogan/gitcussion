@@ -6,12 +6,17 @@ Gitcussion is a platform for discussing Github repositories. You can learn more 
 
 After reading Readme, I always look for last commit date and watch, star, fork counts to evaluate libraries(gems for ruby) 
 then I decide to use it or not. 
-But sometimes thats not enough. I want to learn what people think about it. Thats why I created Gitcussion.
+But sometimes thats not enough. I want to learn what people think about it. Thats why I've built Gitcussion.
+
+== Google Chrome Plugin
+Google Chrome plugin is available for better experience. You can see repo details just in the GitHub page of the repo.
+
+Github Repo: http://github.com/beydogan/gitcussion-chrome
+
+Download: https://chrome.google.com/webstore/detail/gitcussion/maibbmonidiliiffldaklpmipmeplpkg
 
 == Todo
 
-* A Chrome plugin will be available for better experience. 
-  Github Repo: http://github.com/beydogan/gitcussion-chrome
 * Top rated repositories by categories
 * Repository comparing
 * Displaying more data about repositories
