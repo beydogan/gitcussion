@@ -11,6 +11,9 @@ But sometimes thats not enough. I want to learn what people think about it. That
 == Google Chrome Plugin
 Google Chrome plugin is available for better experience. You can see repo details just in the GitHub page of the repo.
 
+![Prototype](http://i.imgur.com/spbQ84K.png)
+
+
 Github Repo: http://github.com/beydogan/gitcussion-chrome
 
 Download: https://chrome.google.com/webstore/detail/gitcussion/maibbmonidiliiffldaklpmipmeplpkg
